@@ -182,16 +182,6 @@ function(input, output, session) {
     imager::save.image(v$croppedImage, "croppedImage.jpeg")
   })
   
-  # output$downloadData <- downloadHandler(
-  #   filename = "croppedImage.jpeg",
-  #   content = function(file){
-  #     jpeg(file)
-  #     app.plot(file)
-  #     dev.off()
-  #     #imager::save.image(v$croppedImage, filename)
-  #   }
-  # )
-  
   ### Keep track of click locations if tracing paw or tumor 
   observeEvent(input$plot1_click, {
     # Keep track of number of clicks for line drawing
